@@ -22,7 +22,7 @@ func Oxford(collection []string, limit int) string {
         return formatOnlyTwo(collection)
     }
     
-    if limit <= 0 {
+    if limit > 0 {
         return formatCommaSeparatedWithLimit(collection, limit, len)
     }
     
