@@ -5,6 +5,7 @@ import (
     "strconv"
 )
 
+// Get the ordinal only for the specific number.
 func Ordinal(number int) string {
     absNumber := int(math.Abs(float64(number)))
     
@@ -25,6 +26,7 @@ func Ordinal(number int) string {
     }
 }
 
+// Ordinalize the number by adding the Ordinal to the number.
 func Odinalize(number int) string {
     return strconv.Itoa(number) + Ordinal(number)
 }

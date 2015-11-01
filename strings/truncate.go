@@ -2,6 +2,8 @@ package strings
 
 import "strings"
 
+// Truncate a string, but never cut a word. So if you would cut the word it will
+// be return completely (to the end or the next whitespace)
 func Truncate(s string, charactersCount int) string {
     strLen := len(s)
     if charactersCount < 0 ||strLen <= charactersCount {
