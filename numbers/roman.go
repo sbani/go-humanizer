@@ -1,4 +1,4 @@
-package humanizer
+package numbers
 
 import (
     "errors"
