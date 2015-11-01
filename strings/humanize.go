@@ -5,10 +5,13 @@ import (
     "regexp"
 )
 
+// Forbidden words are words that will be removed from text (in Humanize func)
 var ForbiddenWords = []string{
     "id",
 }
 
+// Humanize a string means to remove underscores and return string as lower.
+// String can be capitalized
 func Humanize(s string, capitalize bool) string {
     s = regexp.MustCompile("([A-Z])").ReplaceAllString(s, "_$1")
     s = regexp.MustCompile("[_\\s]+").ReplaceAllString(s, " ")
