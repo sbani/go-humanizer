@@ -68,7 +68,7 @@ FromRoman("CXXV") // 125
 ```go
 import "github.com/sbani/go-humanizer/collection"
 
-Oxford([]string{"Albert"}", -1) // "Albert"
+Oxford([]string{"Albert"}, -1) // "Albert"
 Oxford([]string{"Albert", "Norbert"}, -1) // "Albert and Norbert"
 Oxford([]string{"Albert", "Norbert", "Michael", "Kevin"}, -1) // "Albert, Norbert, Michael and Kevin"
 Oxford([]string{"Albert", "Norbert", "Michael", "Kevin"}, 2)) // Albert, Norbert and 2 more
