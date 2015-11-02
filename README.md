@@ -55,13 +55,13 @@ Ordinal(-111) // "th"
 ```go
 import "github.com/sbani/go-humanizer/numbers"
 
-ToRoman(1) // "I"
-ToRoman(5) // "V"
-ToRoman(1300) // "MCCC"
+s, err := ToRoman(1) // "I"
+s, err := ToRomanToRoman(5) // "V"
+s, err := ToRomanToRoman(1300) // "MCCC"
 
-FromRoman("MMMCMXCIX") // 3999
-FromRoman("V") // 5
-FromRoman("CXXV") // 125
+i, err := ToRomanFromRoman("MMMCMXCIX") // 3999
+i, err := ToRomanFromRoman("V") // 5
+i, err := ToRomanFromRoman("CXXV") // 125
 ```
 ### Collection
 #### Oxford
