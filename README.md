@@ -90,7 +90,7 @@ Things that are missing:
 - [x] Numbers: Roman
 - [x] Numbers: Ordinal
 - [x] Collection: Oxford
-- [ ] Numbers: Binary Suffix
+- [x] Numbers: Binary Suffix
 - [ ] Numbers: Metric Suffix
 - [ ] Date time: Difference
 - [ ] Date time: Precise difference
