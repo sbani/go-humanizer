@@ -63,6 +63,15 @@ i, err := ToRomanFromRoman("MMMCMXCIX") // 3999
 i, err := ToRomanFromRoman("V") // 5
 i, err := ToRomanFromRoman("CXXV") // 125
 ```
+#### Binary Suffix
+```go
+import "github.com/sbani/go-humanizer/numbers"
+
+s := BinarySuffix(0) // "0 bytes"
+s := BinarySuffix(1536) // "1.5 kB"
+s := BinarySuffix(1048576 * 5) // "5.00 MB"
+s := BinarySuffix(1073741824 * 2) // "2.00 GB"
+```
 ### Collection
 #### Oxford
 ```go
