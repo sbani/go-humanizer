@@ -1,5 +1,6 @@
 # Humanizer
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md) [![Build Status](https://travis-ci.org/sbani/go-humanizer.svg?branch=master)](https://travis-ci.org/sbani/go-humanizer) [![GoDoc](https://godoc.org/github.com/sbani/go-humanizer?status.svg)](https://godoc.org/github.com/sbani/go-humanizer)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md) [![Build Status](https://travis-ci.org/sbani/go-humanizer.svg?branch=master)](https://travis-ci.org/sbani/go-humanizer) [![GoDoc](https://godoc.org/github.com/sbani/go-humanizer?status.svg)](https://godoc.org/github.com/sbani/go-humanizer) [![codecov.io](https://codecov.io/github/sbani/go-humanizer/coverage.svg?branch=master)](https://codecov.io/github/sbani/go-humanizer?branch=master)
+
 
 Humanize values to make them easier to read.
 
