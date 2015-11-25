@@ -9,7 +9,10 @@ go:
 install:
   - go get -d -v ./... && go build -v ./...
   - go get github.com/stretchr/testify/assert
+  - go get golang.org/x/tools/cmd/cover
   
 script:
-  - go test ./... 
-  - go test ./... -cover
+  - ./run-tests.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
