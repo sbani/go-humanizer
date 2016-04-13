@@ -1,4 +1,4 @@
-package strings
+package units
 
 import (
 	"github.com/stretchr/testify/assert"
