@@ -31,7 +31,7 @@ Truncate(textShort, 7) // Short text
 ```
 #### Binary Suffix
 ```go
-import "github.com/sbani/go-humanizer/strings"
+import "github.com/sbani/go-humanizer/units"
 
 s := BinarySuffix(0) // "0 bytes"
 s := BinarySuffix(1536) // "1.5 kB"
