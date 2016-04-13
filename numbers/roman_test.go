@@ -6,7 +6,7 @@ import (
 )
 
 var workingTests = map[string]int{
-
+	"IX": 9,
 	"CXXV": 125,
 }
 
