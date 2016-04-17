@@ -16,6 +16,9 @@ func TestBinarySuffix(t *testing.T) {
 		1073741824 * 2:    "2.00 GB",
 		1099511627776 * 3: "3.00 TB",
 		1325899906842624:  "1.18 PB",
+		-5:                "-5 bytes",
+		-1.49:             "-1 bytes",
+		-2.8:              "-3 bytes",
 	}
 
 	for input, expected := range tests {
