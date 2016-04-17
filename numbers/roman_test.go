@@ -6,8 +6,12 @@ import (
 )
 
 var workingTests = map[string]int{
-	"IX": 9,
-	"CXXV": 125,
+	"I":          1,
+	"XC":         90,
+	"DCCCXCIX":   899,
+	"IX":         9,
+	"CXXV":       125,
+	"MMMMCMXCIX": 4999,
 }
 
 func TestToRoman(t *testing.T) {
@@ -25,7 +29,7 @@ func TestToRoman(t *testing.T) {
 func TestToRomanError(t *testing.T) {
 	tests := []int{
 		-1,
-		4000,
+		0,
 	}
 
 	for _, input := range tests {
