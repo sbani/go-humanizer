@@ -35,7 +35,7 @@ func ToRoman(number int) (string, error) {
 	}
 
 	var sortedArabs []int
-	for arab, _ := range table {
+	for arab := range table {
 		sortedArabs = append(sortedArabs, arab)
 	}
 	sort.Sort(sort.Reverse(sort.IntSlice(sortedArabs)))
