@@ -37,6 +37,16 @@ ToBool(textShort, "no") // false
 ToBool(textShort, "false") // false
 ToBool(textShort, "yes") // true
 ```
+### Units
+#### Binary Suffix
+```go
+import "github.com/sbani/go-humanizer/units"
+
+s := BinarySuffix(0) // "0 bytes"
+s := BinarySuffix(1536) // "1.5 kB"
+s := BinarySuffix(1048576 * 5) // "5.00 MB"
+s := BinarySuffix(1073741824 * 2) // "2.00 GB"
+```
 ### Numbers
 #### Ordinalize:
 ```go
