@@ -29,9 +29,18 @@ Truncate(textShort, 1) // Short
 Truncate(textShort, 6) // Short
 Truncate(textShort, 7) // Short text
 ```
-#### Binary Suffix
+#### Bool:
 ```go
 import "github.com/sbani/go-humanizer/strings"
+
+ToBool(textShort, "no") // false
+ToBool(textShort, "false") // false
+ToBool(textShort, "yes") // true
+```
+### Units
+#### Binary Suffix
+```go
+import "github.com/sbani/go-humanizer/units"
 
 s := BinarySuffix(0) // "0 bytes"
 s := BinarySuffix(1536) // "1.5 kB"
