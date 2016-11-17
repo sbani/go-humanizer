@@ -1,8 +1,9 @@
 package units
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestBinarySuffix(t *testing.T) {
@@ -15,7 +16,7 @@ func TestBinarySuffix(t *testing.T) {
 		1048576 * 5:       "5.00 MB",
 		1073741824 * 2:    "2.00 GB",
 		1099511627776 * 3: "3.00 TB",
-		1325899906842624:  "1.18 PB",
+		1325899906842623:  "1.18 PB",
 		-5:                "-5 bytes",
 		-1.49:             "-1 bytes",
 		-2.8:              "-3 bytes",
