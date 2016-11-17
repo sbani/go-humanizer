@@ -11,7 +11,7 @@ go get github.com/sbani/go-humanizer
 
 ## Usage
 ### Strings
-#### Humanize:
+#### Humanize
 ```go
 import "github.com/sbani/go-humanizer/strings"
 
@@ -19,7 +19,7 @@ Humanize("news_count", true) // "News count"
 Humanize("User", false) // "user"
 Humanize("news_id", true) // "News"
 ```
-#### Truncate:
+#### Truncate
 Truncate string but never cut within a word.
 ```go
 import "github.com/sbani/go-humanizer/strings"
@@ -29,13 +29,29 @@ Truncate(textShort, 1) // Short
 Truncate(textShort, 6) // Short
 Truncate(textShort, 7) // Short text
 ```
-#### Bool:
+#### Bool
 ```go
 import "github.com/sbani/go-humanizer/strings"
 
 ToBool(textShort, "no") // false
 ToBool(textShort, "false") // false
 ToBool(textShort, "yes") // true
+```
+### Time
+#### Difference
+```go
+import "github.com/sbani/go-humanizer/time"
+
+baseTime := time.Date(2016, 11, 3, 13, 0, 0, 0, time.UTC)
+Difference(baseTime, baseTime) // "just now"
+Difference(baseTime, baseTime.Add(5*time.Second)) // "5 seconds from now"
+Difference(baseTime, baseTime.Add(-61*time.Second)) // "1 minute ago"
+Difference(baseTime, baseTime.Add(-(15*time.Minute+3*time.Nanosecond))) // "15 minutes ago"
+Difference(baseTime, baseTime.Add(2*time.Hour+3*time.Minute)) // "2 hours from now"
+Difference(baseTime, baseTime.Add(-(25*time.Hour))) // "1 day ago"
+Difference(baseTime, baseTime.Add(14*24*time.Hour)) // "2 weeks from now"
+Difference(baseTime, baseTime.Add(-31*24*time.Hour)) // "1 month ago"
+Difference(baseTime, baseTime.Add(366*24*time.Hour)) // "1 year from now"
 ```
 ### Units
 #### Binary Suffix
@@ -48,7 +64,7 @@ s := BinarySuffix(1048576 * 5) // "5.00 MB"
 s := BinarySuffix(1073741824 * 2) // "2.00 GB"
 ```
 ### Numbers
-#### Ordinalize:
+#### Ordinalize
 ```go
 import "github.com/sbani/go-humanizer/numbers"
 
@@ -59,7 +75,7 @@ Ordinalize(23) // "23rd"
 Ordinalize(1002) // "1002nd"
 Ordinalize(-111) // "-111th"
 ```
-#### Ordinal:
+#### Ordinal
 ```go
 import "github.com/sbani/go-humanizer/numbers"
 
@@ -70,7 +86,7 @@ Ordinal(23) // "rd"
 Ordinal(1002) // "nd"
 Ordinal(-111) // "th"
 ```
-#### Roman:
+#### Roman
 ```go
 import "github.com/sbani/go-humanizer/numbers"
 
@@ -97,7 +113,7 @@ Oxford([]string{"Albert", "Norbert", "Michael", "Kevin"}, 2)) // Albert, Norbert
 MIT License. See LICENSE file for more informations.
 
 ## Credits
-A special WOW goes to [PHP Humanizer](https://github.com/coduo/php-humanizer). (This lib is just a port)
+Special thank goes to [PHP Humanizer](https://github.com/coduo/php-humanizer).
 
 ## Contributions
 Contributions are very welcome! Feel free to contact me, send a PR or open an issue.
@@ -110,7 +126,7 @@ Things that are missing:
 - [x] Numbers: Ordinal
 - [x] Collection: Oxford
 - [x] Numbers: Binary Suffix
-- [ ] Numbers: Metric Suffix
-- [ ] Date time: Difference
+- [x] Numbers: Metric Suffix
+- [x] Date time: Difference
 - [ ] Date time: Precise difference
 - [ ] Translations
