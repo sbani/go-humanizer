@@ -1,8 +1,9 @@
 package strings
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestToBool(t *testing.T) {
@@ -16,7 +17,7 @@ func TestToBool(t *testing.T) {
 		"on":    true,
 		"off":   false,
 		"1":     true,
-		"0":     false,		
+		"0":     false,
 	}
 
 	for input, expected := range tests {
