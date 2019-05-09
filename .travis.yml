@@ -1,9 +1,9 @@
 language: go
 
 go:
-  - 1.5
-  - 1.6
-  - 1.7
+  - 1.10
+  - 1.11
+  - 1.12
 
 install:
   - go get -d -v ./... && go build -v ./...
@@ -11,7 +11,7 @@ install:
   - go get golang.org/x/tools/cmd/cover
 
 script:
-  - ./run-tests.sh
+  - go test -race -coverprofile=coverage.txt -covermode=atomic
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - curl -s https://codecov.io/bash | bash
