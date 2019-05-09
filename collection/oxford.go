@@ -36,11 +36,11 @@ func formatOnlyTwo(collection []string) string {
 func formatCommaSeparatedWithLimit(collection []string, limit int, count int) string {
 	display := strings.Join(collection[:limit], ", ")
 	moreCount := count - limit
-	return display + " and " + strconv.Itoa(moreCount) + " more"
+	return display + ", and " + strconv.Itoa(moreCount) + " more"
 }
 
 // Format without limit
 func formatCommaSeparated(collection []string, count int) string {
 	display := strings.Join(collection[:(count-1)], ", ")
-	return display + " and " + collection[(count-1)]
+	return display + ", and " + collection[(count-1)]
 }
