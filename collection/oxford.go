@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// Oxford returns a string from a string collection by adding ", " as a seperator and the word "and" for the last seperator.
+// Oxford returns a string from a string collection by adding ", " as a separator and the word "and" for the last separator.
 // A limit will print all elements to the limit and elements after the limit will be grouped with a "and n more".
 // No limit is represented with with a limit <= 0
 func Oxford(collection []string, limit int) string {
