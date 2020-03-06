@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Difference finds the difference betwee t1 and t2.
+// Difference finds the difference between t1 and t2.
 func Difference(t1, t2 time.Time) string {
 	seconds := math.Abs(t1.Sub(t2).Seconds())
 	if seconds < 1 {
