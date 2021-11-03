@@ -1,8 +1,5 @@
 # Humanizer
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md) [![Go Report Card](https://goreportcard.com/badge/github.com/sbani/go-humanizer)](https://goreportcard.com/report/github.com/sbani/go-humanizer) [![codecov](https://codecov.io/gh/sbani/go-humanizer/branch/master/graph/badge.svg)](https://codecov.io/gh/sbani/go-humanizer) [![GoDoc](https://godoc.org/github.com/sbani/go-humanizer?status.svg)](https://godoc.org/github.com/sbani/go-humanizer)
-
-
-
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md) ![Test Workflow](https://github.com/sbani/go-humanizer/actions/workflows/test.yml/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/sbani/go-humanizer)](https://goreportcard.com/report/github.com/sbani/go-humanizer) [![codecov](https://codecov.io/gh/sbani/go-humanizer/branch/master/graph/badge.svg)](https://codecov.io/gh/sbani/go-humanizer) [![GoDoc](https://godoc.org/github.com/sbani/go-humanizer?status.svg)](https://godoc.org/github.com/sbani/go-humanizer)
 
 Humanize values to make them easier to read.
 
@@ -12,7 +9,9 @@ go get github.com/sbani/go-humanizer
 ```
 
 ## Usage
+
 ### Strings
+
 #### Humanize
 ```go
 import "github.com/sbani/go-humanizer/strings"
@@ -21,6 +20,7 @@ Humanize("news_count", true) // "News count"
 Humanize("User", false) // "user"
 Humanize("news_id", true) // "News"
 ```
+
 #### Truncate
 Truncate string but never cut within a word.
 ```go
@@ -31,6 +31,7 @@ Truncate(textShort, 1) // Short
 Truncate(textShort, 6) // Short
 Truncate(textShort, 7) // Short text
 ```
+
 #### Bool
 ```go
 import "github.com/sbani/go-humanizer/strings"
@@ -40,6 +41,7 @@ ToBool(textShort, "false") // false
 ToBool(textShort, "yes") // true
 ```
 ### Time
+
 #### Difference
 ```go
 import "github.com/sbani/go-humanizer/time"
@@ -55,7 +57,9 @@ Difference(baseTime, baseTime.Add(14*24*time.Hour)) // "2 weeks from now"
 Difference(baseTime, baseTime.Add(-31*24*time.Hour)) // "1 month ago"
 Difference(baseTime, baseTime.Add(366*24*time.Hour)) // "1 year from now"
 ```
+
 ### Units
+
 #### Binary Suffix
 ```go
 import "github.com/sbani/go-humanizer/units"
@@ -66,6 +70,7 @@ s := BinarySuffix(1048576 * 5) // "5.00 MB"
 s := BinarySuffix(1073741824 * 2) // "2.00 GB"
 ```
 ### Numbers
+
 #### Ordinalize
 ```go
 import "github.com/sbani/go-humanizer/numbers"
@@ -77,6 +82,7 @@ Ordinalize(23) // "23rd"
 Ordinalize(1002) // "1002nd"
 Ordinalize(-111) // "-111th"
 ```
+
 #### Ordinal
 ```go
 import "github.com/sbani/go-humanizer/numbers"
@@ -100,7 +106,9 @@ i, err := ToRomanFromRoman("MMMCMXCIX") // 3999
 i, err := ToRomanFromRoman("V") // 5
 i, err := ToRomanFromRoman("CXXV") // 125
 ```
+
 ### Collection
+
 #### Oxford
 ```go
 import "github.com/sbani/go-humanizer/collection"
