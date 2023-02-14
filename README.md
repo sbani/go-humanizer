@@ -102,9 +102,9 @@ s, err := ToRoman(1) // "I"
 s, err := ToRomanToRoman(5) // "V"
 s, err := ToRomanToRoman(1300) // "MCCC"
 
-i, err := ToRomanFromRoman("MMMCMXCIX") // 3999
-i, err := ToRomanFromRoman("V") // 5
-i, err := ToRomanFromRoman("CXXV") // 125
+i, err := FromRoman("MMMCMXCIX") // 3999
+i, err := FromRoman("V") // 5
+i, err := FromRoman("CXXV") // 125
 ```
 
 ### Collection
